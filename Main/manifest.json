@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Messenger Blockr",
+    "description": "blockblockblockblock",
+    "version":"1.0.0",
+    "icons": {"128": "logo-128.png"},
+    "browser_action": { 
+        "default_icon": "logo-150.png",
+        "default_popup": "SelectorBox.html"},
+    "permissions":["activeTab"],
+    
+    "content_scripts": [
+        {
+             "matches": ["*://*.facebook.com/*"],
+             "js":["SelectorBox.js"]
+        }
+
+    ],
+
+    "background":{
+        "scripts":["blockr.js"]
+
+    },
+
+    "run_at": "document_end"
+
+    
+}
